@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Noah Chen is a high school student engineer and cellist exploring embedded systems, signal processing, acoustics, robotics, and music technology."
+    />
+    <title>Noah Chen | Student Engineer and Cellist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="#home" aria-label="Go to home section">
+          <span class="brand-mark">N</span>
+          <span class="brand-text">
+            <strong>Noah Chen</strong>
+            <small>Student Engineer &amp; Cellist</small>
+          </span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#music">Music</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main id="home">
+        <section class="hero section">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Student Engineer and Cellist</p>
+            <h1>Engineering technology that listens.</h1>
+            <p class="hero-text">
+              I am a high school student, cellist, and aspiring engineer interested in embedded systems,
+              signal processing, acoustics, robotics, and the intersection between music and technology.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">View My Projects</a>
+              <a class="button button-secondary" href="documents/resume.pdf" target="_blank" rel="noopener noreferrer">Download Résumé</a>
+            </div>
+            <div class="hero-meta">
+              <span>Embedded Systems</span>
+              <span>Acoustics</span>
+              <span>Robotics</span>
+            </div>
+          </div>
+
+          <div class="hero-media reveal" aria-label="Photography panel for Noah Chen's smart tuner, electronics workspace, or cello">
+            <img
+              class="hero-image"
+              src="images/hero-placeholder.jpg"
+              alt="A photography panel intended for Noah Chen's smart tuner, electronics workspace, or cello."
+              loading="lazy"
+              onerror="this.style.display='none'; this.nextElementSibling.classList.add('is-visible');"
+            />
+            <div class="hero-image-fallback" aria-hidden="true">
+              <span>PROJECT IMAGE</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">01 / About</p>
+            <h2>Engineering curiosity, musical listening, and hands-on problem solving.</h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-text reveal">
+              <p>
+                I am interested in combining engineering, acoustics, music, and problem solving into work that feels useful and expressive.
+                My interests include embedded systems, digital signal processing, robotics, music technology, acoustical engineering,
+                hands-on prototyping, cello performance, and teaching and mentoring.
+              </p>
+              <p>
+                I am still building experience, but I try to approach each project with patience, observation, and a willingness to test ideas carefully.
+              </p>
+            </div>
+            <aside class="panel reveal" aria-labelledby="exploring-heading">
+              <h3 id="exploring-heading">Currently exploring</h3>
+              <ul class="chip-list">
+                <li>Real-time pitch detection</li>
+                <li>ESP32 development</li>
+                <li>Analog audio circuits</li>
+                <li>Embedded user interfaces</li>
+                <li>Acoustics</li>
+                <li>Robotics programming</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <section id="projects" class="section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">02 / Projects</p>
+            <h2>Selected work shaped as engineering case studies.</h2>
+          </div>
+          <div class="project-grid">
+            <article class="project-card reveal" data-project="tuner">
+              <div class="project-image" role="img" aria-label="Placeholder for ESP32 smart instrument tuner project"></div>
+              <div class="project-content">
+                <p class="project-category">Embedded Systems / DSP / Music Technology</p>
+                <h3>ESP32-S3 Smart Instrument Tuner</h3>
+                <p>
+                  A real-time smart tuner designed for bowed string instruments. The project combines an ESP32-S3,
+                  pitch-detection algorithms, analog and digital audio inputs, a display interface, and future Bluetooth connectivity.
+                </p>
+                <div class="project-meta">
+                  <span>Technologies: ESP32-S3, C, ESP-IDF, YIN algorithm</span>
+                  <span>Status: In Development</span>
+                </div>
+                <div class="project-actions">
+                  <button class="button button-secondary" data-open-project="tuner">View Details</button>
+                  <a class="button button-tertiary" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-project="robotics">
+              <div class="project-image robotics-image" role="img" aria-label="Placeholder for robotics programming project"></div>
+              <div class="project-content">
+                <p class="project-category">Robotics / Software</p>
+                <h3>Robotics Programming</h3>
+                <p>
+                  Programming and testing systems for a high school robotics team, including Java programming,
+                  sensing, actuation, and helping newer members learn the codebase.
+                </p>
+                <div class="project-meta">
+                  <span>Technologies: Java, robotics control systems, sensors</span>
+                  <span>Status: Ongoing</span>
+                </div>
+                <div class="project-actions">
+                  <button class="button button-secondary" data-open-project="robotics">View Details</button>
+                  <a class="button button-tertiary" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-project="makerspace">
+              <div class="project-image makerspace-image" role="img" aria-label="Placeholder for library makerspace and 3D printing project"></div>
+              <div class="project-content">
+                <p class="project-category">Community / Fabrication</p>
+                <h3>Library Makerspace and 3D Printing</h3>
+                <p>
+                  Supporting library visitors with 3D printing appointments, basic troubleshooting, and makerspace equipment.
+                </p>
+                <div class="project-meta">
+                  <span>Technologies: 3D printing, slicing software, troubleshooting</span>
+                  <span>Status: Ongoing</span>
+                </div>
+                <div class="project-actions">
+                  <button class="button button-secondary" data-open-project="makerspace">View Details</button>
+                  <a class="button button-tertiary" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-project="strings">
+              <div class="project-image cello-image" role="img" aria-label="Placeholder for Strings for Change project"></div>
+              <div class="project-content">
+                <p class="project-category">Music / Community Service</p>
+                <h3>Strings for Change</h3>
+                <p>
+                  A student chamber-music service project that performs to support community organizations and charitable causes.
+                </p>
+                <div class="project-meta">
+                  <span>Technologies: Cello performance, chamber music, event coordination</span>
+                  <span>Status: Ongoing</span>
+                </div>
+                <div class="project-actions">
+                  <button class="button button-secondary" data-open-project="strings">View Details</button>
+                  <a class="button button-tertiary" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="music" class="section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">03 / Music</p>
+            <h2>Music is part of how I think, listen, and build.</h2>
+          </div>
+          <div class="music-layout reveal">
+            <div class="music-summary">
+              <p>
+                I have more than 10 years of cello experience, with school orchestra and chamber music experience,
+                performance and competition participation, and mentoring younger musicians.
+              </p>
+              <p>
+                I am particularly interested in Romantic and 20th-century repertoire and the relationship between
+                musical perception and engineering.
+              </p>
+            </div>
+            <div class="music-cards">
+              <article class="music-card">
+                <h3>Solo Performance</h3>
+                <p>Recitals, competitions, and focused performance development.</p>
+              </article>
+              <article class="music-card">
+                <h3>Chamber Music</h3>
+                <p>Collaborative playing, interpretation, and ensemble listening.</p>
+              </article>
+              <article class="music-card">
+                <h3>Orchestra</h3>
+                <p>Section playing, ensemble rhythm, and tuning discipline.</p>
+              </article>
+              <article class="music-card">
+                <h3>Music Mentoring</h3>
+                <p>Helping younger students build confidence and technique.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="experience" class="section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">04 / Experience</p>
+            <h2>Community, teaching, and technical growth.</h2>
+          </div>
+          <div class="timeline reveal">
+            <article class="timeline-item">
+              <span class="timeline-date">2024–Present</span>
+              <div>
+                <h3>Math Tutor</h3>
+                <p>Supports students with math concepts, problem solving, and confidence.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-date">2023–Present</span>
+              <div>
+                <h3>Music Mentor</h3>
+                <p>Works with younger musicians and develops patience, communication, and leadership.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-date">2023–Present</span>
+              <div>
+                <h3>Library Makerspace Volunteer</h3>
+                <p>Helps community members use 3D printers and makerspace tools.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-date">2023–Present</span>
+              <div>
+                <h3>Robotics Programmer</h3>
+                <p>Programs robotics systems and helps teach newer team members Java and basic robot software concepts.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-date">2024–Present</span>
+              <div>
+                <h3>Strings for Change Co-Founder</h3>
+                <p>Helps organize and perform chamber music for community-oriented projects.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="skills" class="section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">05 / Skills</p>
+            <h2>Focused skills across engineering, design, and music.</h2>
+          </div>
+          <div class="skills-grid">
+            <article class="panel reveal">
+              <h3>Programming</h3>
+              <ul class="skill-list">
+                <li>C <span>Working knowledge</span></li>
+                <li>C++ <span>Working knowledge</span></li>
+                <li>Python <span>Working knowledge</span></li>
+                <li>Java <span>Working knowledge</span></li>
+                <li>HTML <span>Experienced</span></li>
+                <li>CSS <span>Experienced</span></li>
+                <li>JavaScript <span>Currently learning</span></li>
+              </ul>
+            </article>
+            <article class="panel reveal">
+              <h3>Embedded Systems</h3>
+              <ul class="skill-list">
+                <li>ESP32-S3 <span>Currently learning</span></li>
+                <li>ESP-IDF <span>Currently learning</span></li>
+                <li>FreeRTOS concepts <span>Working knowledge</span></li>
+                <li>I2S audio <span>Working knowledge</span></li>
+                <li>Real-time DSP <span>Working knowledge</span></li>
+                <li>Hardware debugging <span>Working knowledge</span></li>
+                <li>Serial monitoring <span>Experienced</span></li>
+              </ul>
+            </article>
+            <article class="panel reveal">
+              <h3>Electronics</h3>
+              <ul class="skill-list">
+                <li>Schematic design <span>Working knowledge</span></li>
+                <li>Breadboarding <span>Experienced</span></li>
+                <li>Soldering <span>Experienced</span></li>
+                <li>Analog audio circuits <span>Currently learning</span></li>
+                <li>Sensors <span>Working knowledge</span></li>
+                <li>Displays <span>Working knowledge</span></li>
+                <li>Power systems <span>Working knowledge</span></li>
+              </ul>
+            </article>
+            <article class="panel reveal">
+              <h3>Engineering Tools</h3>
+              <ul class="skill-list">
+                <li>VS Code <span>Experienced</span></li>
+                <li>Git <span>Working knowledge</span></li>
+                <li>KiCad <span>Currently learning</span></li>
+                <li>3D printing <span>Experienced</span></li>
+                <li>Technical documentation <span>Experienced</span></li>
+                <li>Test planning <span>Working knowledge</span></li>
+              </ul>
+            </article>
+            <article class="panel reveal">
+              <h3>Music</h3>
+              <ul class="skill-list">
+                <li>Cello <span>Experienced</span></li>
+                <li>Chamber music <span>Experienced</span></li>
+                <li>Orchestra <span>Experienced</span></li>
+                <li>Music mentoring <span>Experienced</span></li>
+                <li>Score study <span>Working knowledge</span></li>
+                <li>Performance <span>Experienced</span></li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" class="section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">06 / Contact</p>
+            <h2>Open to conversations about engineering, music, and learning.</h2>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-card reveal">
+              <h3>Reach out</h3>
+              <ul class="contact-list">
+                <li>Email: <a href="mailto:YOUR_EMAIL_HERE">YOUR_EMAIL_HERE</a></li>
+                <li>GitHub: <a href="https://YOUR_GITHUB_LINK_HERE" target="_blank" rel="noopener noreferrer">YOUR_GITHUB_LINK_HERE</a></li>
+                <li>LinkedIn: <a href="https://YOUR_LINKEDIN_LINK_HERE" target="_blank" rel="noopener noreferrer">YOUR_LINKEDIN_LINK_HERE</a></li>
+                <li>Résumé: <a href="documents/resume.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a></li>
+              </ul>
+            </div>
+            <form class="contact-form reveal" id="contact-form">
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Your name" />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="your@email.com" />
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="5" placeholder="Tell me about your project or question."></textarea>
+              </label>
+              <button class="button button-primary" type="submit">Open Email</button>
+              <p class="form-note">This form opens your email client with a draft message.</p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Noah Chen</p>
+        <p>Student Engineer and Cellist</p>
+        <p>Built with HTML, CSS, and JavaScript</p>
+        <p>&copy; <span id="year"></span></p>
+      </footer>
+    </div>
+
+    <div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-panel" tabindex="-1">
+        <button class="modal-close" type="button" aria-label="Close project details" data-close-modal>&times;</button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
