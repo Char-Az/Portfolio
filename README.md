@@ -1,69 +1,103 @@
 # Noah Chen Portfolio
 
-This is a personal portfolio website built with plain HTML, CSS, and JavaScript. It works by opening index.html directly in a browser or by using the VS Code Live Server extension.
+A responsive personal portfolio built with plain HTML, CSS, and JavaScript. It has no framework, build step, package manager, or backend.
 
-## Open the project in VS Code
+## Open the site
 
-1. Open the portfolio folder in VS Code.
-2. Open index.html.
-3. Use the Live Server extension if you want a local preview.
-   - Right-click index.html and choose "Open with Live Server".
-   - Or use the command palette and run "Live Server: Open with Live Server".
+1. Open this folder in Visual Studio Code.
+2. Open `index.html`.
+3. Either open the file directly in a browser or install the **Live Server** VS Code extension.
+4. With Live Server installed, right-click `index.html` and choose **Open with Live Server**.
 
-## Personal information to replace
+All asset paths are relative, so the site works locally and on GitHub Pages.
 
-Update the content directly in index.html:
+## Edit personal information
 
-- Name and title in the hero section
-- About section text
-- Project descriptions and statuses
-- Music and experience entries
-- Skill labels and levels
-- Contact details in the contact section
+Search `index.html` for the existing name, email, GitHub URL, title, and location. Update every relevant occurrence, including the page description, contact section, footer, and `mailto:` address in `script.js`.
 
-## Where to add images
+## Add or replace images
 
-Place your own images in the images folder:
+Place image files in `images/` using these names:
 
-- images/profile-placeholder.jpg
-- images/smart-tuner-placeholder.jpg
-- images/robotics-placeholder.jpg
-- images/cello-placeholder.jpg
-- images/3d-printing-placeholder.jpg
+- `smart-tuner-schematic.jpg`
+- `vocabforge-screenshot.jpg`
+- `pyo-performance.jpg`
+- `cello-performance.jpg`
+- `strings-for-change-logo.png`
+- `strings-for-change-performance.jpg`
+- `library-3d-printing.jpg`
+- `china-eastern-sfo-internship.jpg`
 
-The page uses those paths in the project and hero sections, and the layout will still look good even if files are missing.
+Keep the same filenames to replace an image without editing HTML. If a file is absent, JavaScript hides the broken image and displays a styled fallback. For good performance, resize photographs to roughly 1600–2000 pixels on their longest side and compress them before publishing.
 
-## Where to place your résumé
+## Edit projects and details
 
-Place your resume as a PDF at:
+Project cards are in the `#projects` section of `index.html`. Each **View Details** button points to a `<template>` near the end of the file:
 
-- documents/resume.pdf
+- `tuner-details`
+- `vocabforge-details`
 
-The Download Résumé button already links to that path.
+Edit the card for the short public summary and its matching template for the longer modal content. Keep the button’s `data-modal-open` value matched to the template `id`.
 
-## How to update the project cards
+## Edit metrics
 
-Project content is defined in index.html inside the Projects section. Each card includes:
+Metrics use a `<dl class="metrics">` structure:
 
-- title
-- category
-- summary
-- technologies and status
-- View Details modal content
+```html
+<div>
+  <dt>48 / 48</dt>
+  <dd>Tests passing</dd>
+</div>
+```
 
-The modal content is populated by the JavaScript object in script.js. If you want to change the details shown in the modal, edit the projectDetails object in script.js.
+Change the value inside `<dt>` and its label inside `<dd>`. Do not publish projected results as completed results.
 
-## Publish with GitHub Pages
+## Update the smart-tuner repository status
 
-1. Create a GitHub repository for the portfolio.
-2. Push the project files to the repository.
-3. In GitHub, open the repository Settings.
-4. Go to Pages.
-5. Choose the main branch and the root folder as the source.
-6. GitHub Pages will publish the site and provide a URL.
+The tuner repository is currently represented by a non-clickable **Private Repository** label.
 
-## Notes
+If the repository becomes public:
 
-- The site uses no frameworks or build tools.
-- The contact form opens the user’s email client using a mailto link rather than pretending to send data to a backend.
-- The design is intended to feel polished and professional for college applications, internships, and engineering opportunities.
+1. Replace that label in `index.html` with an `<a>` using the repository URL.
+2. Use the `button button-secondary` classes.
+3. Set `target="_blank"` and `rel="noopener noreferrer"`.
+4. Update the project text only if the underlying facts have changed.
+
+## Add future VocabForge features
+
+Update both the VocabForge project card and the `vocabforge-details` template only after a feature is working and ready to describe publicly. Keep the current card limited to vocabulary flashcards and customizable vocabulary mock tests until then.
+
+## Replace the hero image
+
+The hero uses `images/hero_image.jpeg`. To replace it, overwrite that file with another optimized image using the same filename, or update the path and intrinsic `width` and `height` values in `index.html`. Keep the descriptive alt text accurate. The existing `data-fallback-image` behavior prevents a broken-image icon if the file is unavailable.
+
+## Add a résumé later
+
+The public site intentionally has no résumé link. If one is needed later:
+
+1. Place the approved PDF in `documents/`.
+2. Add a clearly labeled link in the contact section or navigation.
+3. Use a relative path such as `documents/resume.pdf`.
+4. Review the document for private information before deployment.
+
+## Deploy with GitHub Pages
+
+1. Create or choose a GitHub repository.
+2. Commit `index.html`, `style.css`, `script.js`, `README.md`, and the required asset folders.
+3. Push the files to the repository’s default branch.
+4. On GitHub, open **Settings → Pages**.
+5. Under **Build and deployment**, choose **Deploy from a branch**.
+6. Select the default branch and the `/ (root)` folder, then save.
+7. Wait for GitHub to publish the URL shown in the Pages settings.
+
+Because the site has no build step and uses relative paths, no additional configuration is required.
+
+## Connect a custom domain later
+
+1. Purchase or use a domain you control.
+2. In the repository’s **Settings → Pages**, enter the domain under **Custom domain**.
+3. Add the DNS records GitHub specifies through the domain registrar.
+4. Add a `CNAME` file containing the domain to the repository root if GitHub does not create it automatically.
+5. After DNS validation completes, enable **Enforce HTTPS**.
+
+DNS changes can take time to propagate. Follow the current GitHub Pages documentation and your registrar’s instructions when configuring records.
